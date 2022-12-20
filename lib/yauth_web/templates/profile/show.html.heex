@@ -1,0 +1,24 @@
+<h1>Hello, <%= @current_account.email %></h1>
+<%= link("Add new Post", to: "/addnewpost")  %>
+
+
+<table style= "width: 1200px; margin-left: -200px;">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Title</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+
+<%= for all <- @maybe_user.posts do %>
+      <tr>
+      <td><%= @current_account.username %></td>
+      <td><%= all.header %></td>
+      <td><%= all.body %></td>
+    </tr>
+<% end %>
+
+  </tbody>
+</table>

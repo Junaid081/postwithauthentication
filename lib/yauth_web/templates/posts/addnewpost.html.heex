@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="column column-50 column-offset-25">
+    <h1>Add new post</h1>
+    <%= form_for @changeset, @action, [as: :posts], fn f -> %>
+      <%= label f, :header, "Title" %>
+      <%= text_input f, :header %>
+      <%= error_tag f, :header %>
+
+      <%= label f, :body, "Description" %>
+      <%= text_input f, :body %>
+      <%= error_tag f, :body %>
+
+      <%= submit "Submit", class: "button button-primary" %>
+    <% end %>
+  </div>
+</div>
